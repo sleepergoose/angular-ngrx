@@ -3,7 +3,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { createLoginForm, ILogin, LoginForm } from '../../models/login';
+import { createLoginForm, ILogin, LoginForm } from '../../models/ILogin';
 
 @Component({
   selector: 'app-login',
