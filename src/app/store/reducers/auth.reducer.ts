@@ -1,7 +1,6 @@
 import { Action, createReducer, on } from "@ngrx/store";
 import { IUser } from "../../models/IUser";
-import { loginFailure, loginRequest, loginSuccess } from "../actions/auth.actions";
-
+import { loginFailure, loginSuccess } from "../actions/auth.actions";
 export interface AuthState {
   user: IUser | null,
   error: string | null,
@@ -14,8 +13,17 @@ const authInitialState: AuthState = {
   user: null,
 };
 
+const getStoresAuthState = () => {
+  try {
+    const auth = localStorage.getItem('auth');
+    return auth ? JSON.parse(auth) : authInitialState;
+  } catch {
+    return authInitialState;
+  }
+};
+
 const _authReducer = createReducer(
-  authInitialState,
+  getStoresAuthState(),
   on(loginSuccess, (state, { user }) => ({
     ...state,
     user,

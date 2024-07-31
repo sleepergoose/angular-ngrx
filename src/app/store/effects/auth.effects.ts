@@ -20,6 +20,15 @@ export class AuthEffects {
       switchMap(({ email, password }) => 
         this.httpService.post<ILoginSuccessResponse>(this.loginUrl, { email, password }).pipe(
           map(response => loginSuccess({ user: response?.user })),
+          tap(response => {
+            const auth = {
+              user: response.user,
+              isLoggedIn: true,
+              error: null,
+            };
+
+            localStorage.setItem('auth', JSON.stringify(auth));
+          }),
           catchError(error => of(loginFailure({ error }))),
         )
       ),
