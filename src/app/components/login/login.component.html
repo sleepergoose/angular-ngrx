@@ -1,0 +1,14 @@
+<div class="container">
+  <form [formGroup]="loginForm" (submit)="submitLoginForm(); $event.preventDefault()">
+    <h3>Log In</h3>
+    <div class="form-row">
+      <mat-label>Email</mat-label>
+      <input formControlName="email">
+    </div>
+    <div class="form-row">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password">
+    </div>
+    <button type="submit">Log In</button>
+  </form>
+</div>
