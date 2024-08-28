@@ -5,9 +5,9 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `<router-outlet />`,
-  styles: [],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.sass'
 })
 export class AppComponent {
-
+  title = 'angular-ngrx';
 }
