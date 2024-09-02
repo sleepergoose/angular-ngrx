@@ -8,12 +8,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideEffects } from '@ngrx/effects';
 import {
-  HttpEvent,
-  HttpHandlerFn,
-  HttpRequest,
-  provideHttpClient,
-  withFetch,
-  withInterceptors
+  HttpEvent, HttpHandlerFn, HttpRequest, provideHttpClient, withFetch, withInterceptors
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { appReducer } from './store/reducers/user.reducers';
