@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import * as AuthActions from './app.actions';
+import * as AuthActions from '../actions/user.actions';
 
 export interface IUserStore {
   email: string,

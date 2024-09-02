@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { IUserStore } from './app.reducers';
+import { IUserStore } from '../reducers/user.reducers';
 
 export const selectAuth = createFeatureSelector<IUserStore>('auth');
 

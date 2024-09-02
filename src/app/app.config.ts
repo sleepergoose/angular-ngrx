@@ -16,8 +16,8 @@ import {
   withInterceptors
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { appReducer } from './store/app.reducers';
-import { AuthEffects } from './store/app.effects';
+import { appReducer } from './store/reducers/user.reducers';
+import { AuthEffects } from './store/effects/user.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [

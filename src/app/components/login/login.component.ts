@@ -6,9 +6,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { createLoginForm, ILogin } from '../../models/login.model';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import * as AuthActions from '../../store/app.actions';
-import { authSelector } from '../../store/app.selectors';
+import * as AuthActions from '../../store/actions/user.actions';
+import { authSelector } from '../../store/selectors/user.selectors';
 import { CommonModule } from '@angular/common';
+import { InputComponent } from '../input/input.component';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ import { CommonModule } from '@angular/common';
     MatSelectModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InputComponent,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.sass'
