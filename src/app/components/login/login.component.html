@@ -10,5 +10,8 @@
       <input matInput formControlName="password">
     </div>
     <button type="submit">Log In</button>
+    <h1>{{auth$ | async | json}}</h1>
+    <button (click)="display()">Display</button>
   </form>
+
 </div>

@@ -1,11 +1,11 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-export interface Login {
+export interface ILogin {
   email: string;
   password: string;
 }
 
-export const createLoginForm = (initData?: Login) => {
+export const createLoginForm = (initData?: ILogin) => {
   return new FormGroup({
     email: new FormControl<string>(
       initData?.email ?? '',
